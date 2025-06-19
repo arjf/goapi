@@ -5,7 +5,6 @@ import (
 	"net/http"
 
 	"github.com/arjf/goapi/api"
-	"github.com/arjf/goapi/cmd/api"
 	"github.com/arjf/goapi/internal/tools"
 	"github.com/gorilla/schema"
 	log "github.com/sirupsen/logrus"
@@ -40,7 +39,7 @@ func GetCoinBalance(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var response = api.CoinBalanceResponse{
-		Balance: (*tokenDetails.Coins),
+		Balance: (*tokenDetails).Coins,
 		Code:    http.StatusOK,
 	}
 
