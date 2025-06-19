@@ -16,6 +16,13 @@ func main() {
 
 	fmt.Println("Starting GO API Service ->")
 
+	fmt.Println(`
+ ______     ______        ______     ______   __
+/\  ___\   /\  __ \      /\  __ \   /\  == \ /\ \
+\ \ \__ \  \ \ \/\ \     \ \  __ \  \ \  _-/ \ \ \
+ \ \_____\  \ \_____\     \ \_\ \_\  \ \_\    \ \_\
+  \/_____/   \/_____/      \/_/\/_/   \/_/     \/_/ `)
+
 	err := http.ListenAndServe("localhost:8080", r)
 	if err != nil {
 		log.Error(err)
